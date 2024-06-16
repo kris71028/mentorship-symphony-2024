@@ -8,6 +8,7 @@ This project aims to analyze web-scraped data containing job descriptions for da
 - Generate plots for the following:
   - Distribution of salaries
   - Top 10 most frequently used words in the job descriptions
+  - Top 10 Most Frequently Used Words in Job Descriptions (Excluding Common Words)
   - Correlation between ratings and salaries
   - Correlation between employee number and salaries
   - Count of easy apply jobs
