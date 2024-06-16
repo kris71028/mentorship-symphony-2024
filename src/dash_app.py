@@ -5,23 +5,19 @@ import plotly.express as px
 from collections import Counter
 import re
 
-# Load the data
-df = pd.read_csv('../data/processed/DataScientist_cleaned.csv')  # Ensure this path is correct
+df = pd.read_csv('../data/processed/DataScientist_cleaned.csv')
 
-# Preprocess for common words without excluding connectors
 all_descriptions = ' '.join(df['Job Description']).lower()
 all_descriptions = re.sub(r'[^a-z\s]', '', all_descriptions)
 words = all_descriptions.split()
 word_counts_with_connectors = Counter(words).most_common(10)
 common_words_with_connectors_df = pd.DataFrame(word_counts_with_connectors, columns=['word', 'count'])
 
-# Preprocess for common words excluding connectors
 stop_words = set(['and', 'the', 'to', 'in', 'a', 'with', 'an', 'for', 'of', 'on', 'at', 'by', 'from', 'about', 'as', 'into', 'like', 'through', 'after', 'over', 'between', 'out', 'against', 'during', 'without', 'before', 'under','other','this', 'around','are','be','that','or', 'is','you','we','will','our', 'among'])
 words_excluding_connectors = [word for word in words if word not in stop_words]
 word_counts_without_connectors = Counter(words_excluding_connectors).most_common(10)
 common_words_without_connectors_df = pd.DataFrame(word_counts_without_connectors, columns=['word', 'count'])
 
-# Initialize the app
 app = dash.Dash(__name__)
 
 app.layout = html.Div([
