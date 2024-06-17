@@ -13,17 +13,31 @@ This project aims to analyze web-scraped data containing job descriptions for da
   - Correlation between employee number and salaries
   - Count of easy apply jobs
   - Average salary by company size
+- Expand analysis using interactive visualizations with Plotly or Bokeh.
+- Build predictive models to forecast salaries based on various features.
+  - Try different machine learning algorithms: linear regression, decision trees, and random forests.
+  - Showcase model performance using recommended metrics for each selected approach.
+- Use NLP techniques to cluster job descriptions into different categories.
+  - Analyze clusters/groups and assign meaningful categories.
 
 ## Materials
 - **Dataset:** [Data Scientist Jobs on Kaggle](https://www.kaggle.com/datasets/andrewmvd/data-scientist-jobs)
 - **IDE:** Jupyter Notebook/Lab
-- **Visualization Library:** Matplotlib
+- **Visualization Libraries:** Matplotlib, Plotly, Bokeh
 
 ## Repository Structure
 - `data/`: Contains the raw and processed data files.
 - `notebooks/`: Jupyter notebooks with the analysis and visualizations.
+  - `01_data_cleaning.ipynb`: Data cleaning operations.
+  - `02_visualization_drop_na.ipynb`: Data visualization with drop NA.
+  - `03_visualization_fill_nan.ipynb`: Data visualization with fill NA.
+  - `04_interactive_visualizations.ipynb`: Interactive visualizations.
+  - `05_predictive_modeling.ipynb`: Predictive modeling with machine learning algorithms.
+  - `06_nlp_clustering.ipynb`: NLP clustering of job descriptions.
 - `scripts/`: Python scripts for data cleaning and manipulation.
+  - `dash_app.py`: Script for the interactive dashboard using Plotly Dash.
 - `README.md`: Project overview and documentation.
+
 
 ## Getting Started
 1. Clone this repository to your local machine:
@@ -36,10 +50,16 @@ This project aims to analyze web-scraped data containing job descriptions for da
     ```
 3. Install the required libraries:
     ```bash
-    pip install pandas numpy matplotlib jupyter
+    pip install -r requirements.txt
     ```
 4. Open the Jupyter Notebook:
     ```bash
     jupyter notebook
     ```
 5. Explore the notebooks in the `notebooks/` directory.
+
+
+## Requirements
+The required Python libraries are listed in `requirements.txt`. To create a `requirements.txt` file, you can use the following command:
+```bash
+pip freeze > requirements.txt
