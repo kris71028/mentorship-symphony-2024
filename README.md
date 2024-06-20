@@ -17,8 +17,18 @@ This project aims to analyze web-scraped data containing job descriptions for da
 - Build predictive models to forecast salaries based on various features.
   - Try different machine learning algorithms: linear regression, decision trees, and random forests.
   - Showcase model performance using recommended metrics for each selected approach.
+  - Additional Visualizations for Predictive Modeling:
+      - Scatter Plot with Regression Line: Visualize how the model fits the data.
+      - Residual Plot: Check for homoscedasticity and identify patterns in residuals.
+      - Actual vs. Predicted Values Plot: Visualize the accuracy of predictions.
+      - Learning Curves: Diagnose if the model is overfitting or underfitting.
+      - Feature Importance: Understand which variables have the most impact on salary.
 - Use NLP techniques to cluster job descriptions into different categories.
-  - Analyze clusters/groups and assign meaningful categories.
+  - Analyze clusters/groups and assign meaningful categories
+  - Additional Visualizations for NLP Clustering:
+      - Scatter Plot with Centroids: Visualize clusters and centroids.
+      - Elbow Method Plot: Determine the optimal number of clusters (K).
+      - Silhouette Plot: Evaluate the quality of clusters.
 
 ## Materials
 - **Dataset:** [Data Scientist Jobs on Kaggle](https://www.kaggle.com/datasets/andrewmvd/data-scientist-jobs)
